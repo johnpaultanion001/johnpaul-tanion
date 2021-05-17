@@ -11,7 +11,8 @@ class MsgController extends Controller
     
     public function index()
     {
-        //
+        $msgs = Msg::latest()->get();
+        return response()->json($msgs);
     }
 
   

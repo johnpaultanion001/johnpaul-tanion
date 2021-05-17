@@ -9,3 +9,4 @@ Route::get('/', function () {
 });
 
 Route::post('sendmsg', 'App\Http\Controllers\MsgController@store')->name('msg.store');
+Route::get('msgs', 'App\Http\Controllers\MsgController@index')->name('msg.index');
