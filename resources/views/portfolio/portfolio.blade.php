@@ -89,7 +89,7 @@
     <div class="section section-portfolio">
       <div class="container">
         <div class="button-container">
-          <a target="_blank" href="/assets/resume/resume.docx" class="btn btn-primary btn-round btn-lg">My Resume</a>
+          <a target="_blank" href="/assets/resume/resume.docx" rel="tooltip" title="Download my resume" class="btn btn-primary btn-round btn-lg">My Resume</a>
           <a href="https://www.facebook.com/johnpaul.tanion.773" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Facebook">
              <i class="fab fa-facebook-square"></i>
           </a>
@@ -110,13 +110,15 @@
                         <a href="examples/landing-page.html" target="_blank">
                             <img src="assets/img/landing.jpg" alt="Image" class="img-raised">
                         </a>
-                        <a href="examples/landing-page.html" class="btn btn-outline-default btn-primary btn-round">View Landing Page</a>
+                        <a href="/" class="btn btn-outline-default btn-primary btn-round">Live Preview</a>
+                        <a href="/" class="btn btn-outline-default btn-primary btn-round">Documentation</a>
                       </div>
                       <div class="col-md-6">
                         <a href="examples/profile-page.html" target="_blank">
                             <img src="assets/img/profile.jpg" alt="Image" class="img-raised">
                         </a>
-                        <a href="examples/profile-page.html" class="btn btn-outline-default btn-primary btn-round">View Profile Page</a>
+                        <a href="/" class="btn btn-outline-default btn-primary btn-round">Live Preview</a>
+                        <a href="/" class="btn btn-outline-default btn-primary btn-round">Documentation</a>
                       </div>
                     </div>
                 </div>
@@ -243,7 +245,7 @@
             </div>
             <div class="col-md-10 ml-auto col-xl-6 text-center mt-4 mr-auto">
                 
-            <a target="_blank" href="/assets/resume/resume.docx" class="btn btn-primary btn-round btn-lg">Download My Resume</a>
+            <a target="_blank" href="/assets/resume/resume.docx" rel="tooltip" title="Download my resume" class="btn btn-primary btn-round btn-lg">Download My Resume</a>
               
             </div>
           </div>
