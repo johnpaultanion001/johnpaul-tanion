@@ -5,17 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Msg;
 use Illuminate\Http\Request;
 use Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Notification;
 
 class MsgController extends Controller
 {
-    
+
     public function index()
     {
         $msgs = Msg::latest()->get();
         return response()->json($msgs);
     }
 
-  
+
     public function create()
     {
         //
@@ -23,34 +25,32 @@ class MsgController extends Controller
 
     public function store(Request $request)
     {
-        $errors =  Validator::make($request->all(), [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255',],
-            'message' => ['required'],
-        ]);
+        $emailContent = [
+            'notif'          => 'Message from ' . $request->input('name'),
+            'email'           => $request->input('email'),
+            'name'           => $request->input('name'),
+            'body'           => $request->input('message'),
+        ];
+        Mail::to('johnpaultanion001@gmail.com')
+                ->send(new Notification($emailContent));
 
-        if ($errors->fails()) {
-            return response()->json(['errors' => $errors->errors()]);
-        }
-
-        Msg::create($request->all());
 
         return response()->json(['success' => 'Your message sent, Thank You :)']);
     }
 
-  
+
     public function show(Msg $msg)
     {
         //
     }
 
-   
+
     public function edit(Msg $msg)
     {
         //
     }
 
-   
+
     public function update(Request $request, Msg $msg)
     {
         //
